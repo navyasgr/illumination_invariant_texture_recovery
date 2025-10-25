@@ -129,7 +129,7 @@ References
 AI4Bharat: Seq2Seq Translation Tutorial
 Aksharantar dataset (Google Drive link)
 ## Documentation
-- [Technical Report (PDF)](docs/complete_technical_report.pdf)
+- [Technical Report (PDF)](docs/complete_techical_report.pdf)
 
 Conclusion
 This project demonstrates:
