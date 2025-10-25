@@ -199,7 +199,7 @@ class HomomorphicTextureRecovery:
 # ================= Demonstration =================
 if __name__ == "__main__":
     processor = HomomorphicTextureRecovery(cutoff_frequency=30, filter_order=2)
-    image_path = 'images/input/textured_surface.jpg'  # Replace with your image
+    image_path = 'images/texture_input.jpeg'  
     R, L = processor.process_grayscale_image(image_path)
     processor.visualize_results(image_path, R, L)
     print("✅ Grayscale texture recovery complete!")
