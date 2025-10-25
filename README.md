@@ -128,6 +128,8 @@ Structural similarity ensures high-quality recovery.
 References
 AI4Bharat: Seq2Seq Translation Tutorial
 Aksharantar dataset (Google Drive link)
+## Documentation
+- [Technical Report (PDF)](docs/technical_report.pdf)]
 
 Conclusion
 This project demonstrates:
