@@ -6,7 +6,7 @@ Recover intrinsic textures from unevenly lit images using homomorphic filtering,
 
 This project addresses the challenge of recovering the *true texture of a surface* from a single grayscale or color image under *uneven illumination. Uneven lighting often masks or distorts the underlying surface patterns, and simple enhancement techniques like histogram equalization fail to recover the **intrinsic texture*.  
 
-Using *homomorphic filtering, this project separates **reflectance (texture)* from *illumination (lighting variations)* by leveraging their *frequency characteristics* in the image.
+Using homomorphic filtering, this project separates **reflectance (texture) from illumination (lighting variations) by leveraging their frequency characteristics in the image.
 
 *Goals of this Project:*
 - Extract illumination-invariant texture from grayscale and color images.
@@ -130,6 +130,7 @@ AI4Bharat: Seq2Seq Translation Tutorial
 Aksharantar dataset (Google Drive link)
 ## Documentation
 - [Technical Report (PDF)](docs/complete_techical_report.pdf)
+- [Research_paper (PDF)](docs/Research_paper.pdf)
 
 Conclusion
 This project demonstrates:
