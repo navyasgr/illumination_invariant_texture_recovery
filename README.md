@@ -128,6 +128,37 @@ Structural similarity ensures high-quality recovery.
 References
 AI4Bharat: Seq2Seq Translation Tutorial
 Aksharantar dataset (Google Drive link)
+
+## How to Execute (Step-by-Step)
+
+Step 1 — Clone the Repository
+git clone https://github.com/navyasgr/illumination_invariant_texture_recovery.git
+cd illumination_invariant_texture_recovery
+
+Step 2 — Install Dependencies
+pip install -r requirements.txt
+
+Step 3 — Add Your Input Image
+Place a grayscale or color textured image (like paper, fabric, or wall with shadows) into:
+images/
+Example:
+images/textured_surface.jpg
+
+Step 4 — Run Grayscale Illumination Recovery
+python src/homomorphic_grayscale.py
+
+This will generate:
+images/output/reflectance_output.png
+images/output/illumination_output.png
+images/output/comparison.png
+
+ Step 5 — Run Color Correction Mode (Optional)
+python src/color_homomorphic.py
+
+
+This performs spectral illumination correction while maintaining color ratios.
+
+
 ## Documentation
 - [Technical Report (PDF)](docs/complete_techical_report.pdf)
 - [Research_paper (PDF)](docs/Research_paper.pdf)
