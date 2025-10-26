@@ -163,7 +163,35 @@ This performs spectral illumination correction while maintaining color ratios.
 - [Technical Report (PDF)](docs/complete_techical_report.pdf)
 - [Research_paper (PDF)](docs/Research_paper.pdf)
 
-Conclusion
+## References and Inspirations
+
+In developing this project, I referred to several key research papers that provide foundational insights into illumination and reflectance separation, nonlinear filtering, and intrinsic texture recovery:
+
+Gang Jun Tu et al., “Illumination and Reflectance Estimation with its Application in Foreground Detection”
+Explores techniques to estimate illumination and reflectance components from a single image.
+Guided my approach in modeling image formation as 
+𝐼(𝑥,𝑦)=𝑅(𝑥,𝑦)×𝐿(𝑥,𝑦)
+I(x,y)=R(x,y)×L(x,y) and designing strategies to separate these components effectively.
+
+Inna Stainvas, “A Generative Model for Separating Illumination and Reflectance from Images”
+Introduces generative probabilistic models for estimating intrinsic image components.
+Inspired my method to smoothly estimate illumination maps while preserving the underlying texture.
+
+Alan V. Oppenheim et al., “Nonlinear Filtering of Multiplied and Convolved Signals” (IEEE)
+Classic work on nonlinear filtering of multiplicative signals, which is directly relevant to homomorphic filtering.
+Provided the theoretical basis for manual log-domain filtering used to separate high-frequency textures (reflectance) from low-frequency illumination.
+
+## Novel Contributions of This Project
+
+While these papers laid the foundation, this project introduces practical and novel enhancements:
+
+Frequency-Domain Texture Recovery Pipeline: Combines manual DFT, optimized FFT, and Butterworth filters to separate illumination and reflectance in a single, end-to-end pipeline.
+Chromaticity-Preserved Color Filtering: Extends grayscale methods to color images, correcting illumination while maintaining true color ratios—a feature not directly addressed in the referenced works.
+Parameter-Tunable, Educational Framework: Users can adjust filter cutoff frequencies, orders, and gamma values to understand how each parameter affects recovery, making the implementation both practical and instructive.
+Comprehensive Visualization and Quantitative Metrics: Step-by-step visualization of log-domain transformations, spectra, recovered textures, illumination maps, and evaluation with MSE/PSNR, demonstrating the effectiveness beyond classical histogram equalization.
+By combining classical theories from the literature with these practical enhancements, this project offers a robust, intuitive, and reproducible solution for illumination-invariant texture recovery.
+
+## Conclusion
 This project demonstrates:
 ✅ Deep theoretical understanding of frequency-domain image processing
 ✅ Manual and optimized Fourier transform implementations
