@@ -125,7 +125,7 @@ Mean Squared Error (MSE) between original and reconstructed image.
 Peak Signal-to-Noise Ratio (PSNR).
 Structural similarity ensures high-quality recovery.
 
-## 📁 Repository Structure
+##  Repository Structure
 
 Below is the organized layout of the project along with a visual overview for clarity.
 
@@ -142,7 +142,7 @@ illumination_invariant_texture_recovery/
 ├── LICENSE
 └── README.md
 ```
-## 🎯 Input Image
+##  Input Image
 
 <p align="center">
   <img src="images/texture_input.jpeg" width="500" alt="Input Grid Image"/>
@@ -208,19 +208,20 @@ Classic work on nonlinear filtering of multiplicative signals, which is directly
 Provided the theoretical basis for manual log-domain filtering used to separate high-frequency textures (reflectance) from low-frequency illumination.
 
 ## Novel Contributions of This Project
+While existing studies provided the foundation, this project introduces practical improvements that make illumination correction more effective and understandable:
 
-While these papers laid the foundation, this project introduces practical and novel enhancements:
+Frequency-Domain Recovery Pipeline: A custom DFT–FFT–Butterworth workflow that cleanly separates illumination and texture in a single pass.
 
-Frequency-Domain Texture Recovery Pipeline: Combines manual DFT, optimized FFT, and Butterworth filters to separate illumination and reflectance in a single, end-to-end pipeline.
-Chromaticity-Preserved Color Filtering: Extends grayscale methods to color images, correcting illumination while maintaining true color ratios—a feature not directly addressed in the referenced works.
-Parameter-Tunable, Educational Framework: Users can adjust filter cutoff frequencies, orders, and gamma values to understand how each parameter affects recovery, making the implementation both practical and instructive.
-Comprehensive Visualization and Quantitative Metrics: Step-by-step visualization of log-domain transformations, spectra, recovered textures, illumination maps, and evaluation with MSE/PSNR, demonstrating the effectiveness beyond classical histogram equalization.
-By combining classical theories from the literature with these practical enhancements, this project offers a robust, intuitive, and reproducible solution for illumination-invariant texture recovery.
+Color-Preserving Correction: Extends classical grayscale filtering to color images while retaining natural chromatic balance.
+
+Interactive & Tunable Design: Users can experiment with filter parameters to observe real-time changes, making it both educational and adaptive.
+
+Rich Visual & Quantitative Validation: Every stage—from log-domain spectra to recovered textures—is visualized with MSE/PSNR metrics, offering deeper insight than conventional methods.
 
 ## Conclusion
 This project demonstrates:
-✅ Deep theoretical understanding of frequency-domain image processing
-✅ Manual and optimized Fourier transform implementations
-✅ Multiple color-correction strategies with trade-offs
-✅ Quantitative analysis and comprehensive visualization
+Deep theoretical understanding of frequency-domain image processing
+ Manual and optimized Fourier transform implementations
+ Multiple color-correction strategies with trade-offs
+ Quantitative analysis and comprehensive visualization
 By exploiting the frequency differences between reflectance and illumination, homomorphic filtering effectively recovers the intrinsic texture of images under varying lighting conditions,which classical histogram equalization cannot achieve.
