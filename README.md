@@ -125,9 +125,35 @@ Mean Squared Error (MSE) between original and reconstructed image.
 Peak Signal-to-Noise Ratio (PSNR).
 Structural similarity ensures high-quality recovery.
 
-References
-AI4Bharat: Seq2Seq Translation Tutorial
-Aksharantar dataset (Google Drive link)
+## 📁 Repository Structure
+
+Below is the organized layout of the project along with a visual overview for clarity.
+
+```
+illumination_invariant_texture_recovery/
+│
+├── docs/                           # Documentation and technical reports
+├── images/
+│   └── output/                     # Generated result images
+│       ├── reflectance_vs_illumination.png
+│       └── texture_input.jpeg
+├── src/                            # Core implementation modules
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
+## 🎯 Input Image
+
+<p align="center">
+  <img src="images/texture_input.jpeg" width="500" alt="Input Grid Image"/>
+</p>
+
+*Figure: Input image of the planar grid used for radial distortion estimation.*
+
+<p align="center">
+  <img src="images/output/reflectance_vs_illumination.png" width="600" alt="Project Folder Structure"/>
+</p>
+
 
 ## How to Execute (Step-by-Step)
 
